@@ -1,0 +1,97 @@
+/* 
+  /* Styles for large screens */
+  @media only screen and (min-width: 1008px) {
+    /* Insert your CSS rules here */
+
+  }
+  
+
+    /* Styles for medium screens */
+@media  screen and (max-width: 1007px) {
+        /* Insert your CSS rules here */
+        html {
+          font-size: 50%;
+        }
+        .wrap{
+            width:var(--width-md);
+        }
+        .type-text{
+          font-size:3rem;
+        }
+        .menu{
+            display:block;
+            color:#fff;
+            font-size: 2.5rem;
+        }
+        .nav{
+            display: none;
+            padding-top:6rem;
+            width:30%;
+            height:100vh;
+            position:absolute;
+            right: 0rem;
+            top:0;
+            text-align: center;
+            background: #00000079;
+            
+            
+        }
+        .nav li{
+            display: block;
+            position:relative;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        .home-wrap{
+          height: 70vh;
+
+        }
+        .about-row{
+          flex-direction: column;
+          
+        }
+        .about-left{
+          width:100%;
+          margin-bottom:4rem;
+        }
+        .about-right{
+          width:100%;
+        }
+        .a-btn-wrap{
+          display: flex;
+          justify-content: center;
+        }
+        .col-3{
+          flex:1 1 40%;
+        }
+
+        .teacher{
+          width:25rem;
+          height:25rem;
+        }
+    }
+      /* Styles for small screens */
+@media screen and (max-width: 640px) {
+    /* Insert your CSS rules here */
+    html {
+      font-size:35%;
+    }
+    .wrap{
+        width:var(--width-sm);
+    }
+    .home-wrap{
+      height: 35vh;
+
+    }
+    .col-3{
+      flex:90%;
+    }
+    .teacher{
+      width:33rem;
+      height:33rem;
+    }
+
+  }
+   
+
+  $  git config --global user.email "tssabbirhosen@gmail.com"

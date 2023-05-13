@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --bg-color:#0c2630;
+    --parimary:#fff;
+    --hover:#29E9BC;
+    --black:#0C1013;
+    
+    --width-lr:80%;
+    --width-md:90%;
+    --width-sm:95%;
+}
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+p{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+h2{
+    font-weight:500 ;
+    font-size: 3.5rem;
+}
+h3{
+    font-weight: 600;
+    font-size: 3rem;
+}
+h4{
+    font-weight:3rem;
+    font-weight:700 ;
+}
+h5{
+    font-weight: 300;
+    font-size: 2rem;
+}
+a{
+    font-weight: 600;
+    font-size: 1.4rem;
+    color:var(--parimary)
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover; 
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+body{
+    background: var(--black);
+    scroll-behavior: smooth;
+}
+
+.full-wrap{
+    width:100%;
+}
+section{
+    padding:7rem 0rem;
+}
+#home{
+    padding:0rem;
+}
+.wrap{
+    width:var(--width-lr);
+    margin:0 auto;
+}
+
+
+.h-bg{
+    background-image: url("images/h-bg1.jpeg");
+    background-size: cover;
+
+}
+/* nav start */
+.nav-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0rem;
+}
+.nav-wrap h4{
+    font-size: 2.5rem;
+    cursor: pointer;
+    position:relative;
+    transition:.4s all ease;
+
+}
+.close{
+    font-size: 2.3rem;
+    z-index: 50;
+}
+.water1{
+    bottom:-.5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color:transparent;
+    -webkit-text-stroke:1px var(--hover);
+    position:absolute;
+
+}
+.water2{
+    bottom:-.5rem;
+    font-size: 4rem;
+    position:absolute;
+    font-weight: 700;
+    color:var(--hover);
+    animation:water 4s ease-in-out infinite ;
+}
+@keyframes water {
+    0%,100%{
+        clip-path: polygon(0 48%, 18% 54%, 36% 58%, 56% 53%, 74% 50%, 92% 53%, 100% 60%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 61%, 17% 68%, 35% 64%, 55% 60%, 74% 60%, 88% 54%, 100% 40%, 100% 100%, 0% 100%);
+    }
+}
+.hl-text{
+    color:var(--hover);
+    font-size: 3.6rem;
+}
+.nav li {
+    display: inline;
+    margin-left:2rem;
+    position: relative;
+}
+.nav li a{
+    transition:.4s all ease;
+}
+.nav li a:hover{
+    color:var(--hover);
+
+}
+.nav li a::after{
+    content:"";
+    width:0%;
+    position: absolute;
+    border-bottom:.3rem solid var(--hover);
+    bottom:-1rem;
+    left:50%;
+    transform: translateX(-50%);
+    transition:.4s all linear;
+}
+.nav li a:hover::after{
+    width:100%;
+}
+.active{
+    color:var(--hover);
+}
+.menu{
+    display: none;
+    cursor: pointer;
+}
+.close{
+    display: none;
+    cursor: pointer;
+}
+.activ{
+    color:var(--hover);
+    transition: .3 s all linear;
+}
+.i{
+    height:500rem;
+}
+/* nav end */
+
+/* home text start  */
+.home-wrap{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.home-text{
+
+    
+    }
+    .home-text h4{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .type-text{
+        font-size: 3.5rem;
+        color:#2ce17d;
+        position:relative;
+    }
+    .type-text::after{
+        content: "";
+        position:absolute;
+        top:0;
+        right:-.5rem;
+        width:.2rem;
+        background:var(--hover);
+        height:60%;
+        top:50%;
+        transform: translateY(-50%);
+
+        animation: cursorText .6s infinite;
+    }
+    @keyframes cursorText {
+        0%,100%{
+           height:5%
+        }
+        50%{
+            opacity: 1;
+            height: 100%;
+        }  
+    }
+/* home text end */
+
+.about-top-row{
+    text-align: center;
+}
+/* about start  */
+.about-wrap h1 {
+    font-weight: 600;
+    padding:0rem 2rem;
+    display:inline-block;
+    border-bottom: .3rem solid var(--hover);
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:3%;
+    
+}
+.about-left{
+    width: 45%;
+    border:2px solid var(--hover);
+    box-shadow: 0rem 0rem 1rem var(--parimary) ;
+    height: 27rem;
+
+}
+.about-left img{
+    width:cover;
+
+}
+.about-right{
+    width: 53%;
+
+}
+.about-right p{
+
+}
+
+.btn{
+    margin-top:3rem;
+    border:none;
+    font-size: rem;
+    padding:.8rem 1.5rem;
+    position:relative;
+    background:var(--parimary);
+    color:var(--black);
+    font-weight: 400;
+    transition:.4s all linear;
+    cursor: pointer;
+
+
+}
+.btn:hover{
+    color:var(--parimary);
+    background: var(--hover);
+}
+.btn::after{
+    content: "";
+    position:absolute;
+    border-bottom:.2rem  solid var(--parimary);
+    border-right:.2rem  solid var(--parimary);
+    width:100%;
+    height:100%;
+    right:-.0rem;
+    bottom:-.0rem;
+
+}
+.btn::before{
+    content: "";
+    position:absolute;
+    border-top:.2rem  solid var(--parimary);
+    border-left:.2rem  solid var(--parimary);
+    width:100%;
+    height:100%;
+    right:.0rem;
+    bottom:.0rem;
+    transition:  .4s linear;
+}
+.btn:hover::after{
+    content: "";
+    position:absolute;
+    border-bottom:.2rem  solid var(--parimary);
+    border-right:.2rem  solid var(--parimary);
+    width:100%;
+    height:100%;
+    right:-.5rem;
+    bottom:-.5rem;
+    transition:  .4s linear;
+
+}
+.btn:hover::before{
+    content: "";
+    position:absolute;
+    border-top:.2rem  solid var(--parimary);
+    border-left:.2rem  solid var(--parimary);
+    width:100%;
+    height:100%;
+    right:.5rem;
+    bottom:.5rem;
+}
+
+
+/* teacher  */
+
+.teacher-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:3.3%;
+    
+}
+.col-3{
+    flex:1 1 30%;
+    background:var(--parimary);
+    padding:.6rem;
+    margin-bottom:3rem;
+    border-radius: .6rem;
+    box-shadow: 0rem 0rem 1.8rem var(--hover);
+}
+.t-wrap::before{
+    content: "";
+    position:absolute;
+    width:100%;
+    height:50%;
+    top:0;
+    left:0;
+    background: var(--hover);
+    z-index: 10;
+}
+
+.t-wrap{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 3rem;
+    text-align: center;
+}
+.teacher{
+    width:20rem;
+    height:20rem;
+    margin:auto;
+    border-radius: 50%;
+    border:.5rem solid var(--hover);
+    margin-bottom:2rem;
+    z-index: 200;
+
+}
+
+
+.t-wrap{
+    color:var(--black)
+}
+.t-wrap h4{
+    font-size:3rem;
+}
+.t-wrap p{
+    font-size:1.8rem;
+    
+}
