@@ -57,10 +57,11 @@ html{
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
     color:#fff;
+    scroll-behavior: smooth;''
 }
 body{
     background: var(--black);
-    scroll-behavior: smooth;
+
 }
 
 .full-wrap{
@@ -79,9 +80,31 @@ section{
 
 
 .h-bg{
-    background-image: url("images/h-bg1.jpeg");
+    background:linear-gradient(#0000006e,#0000005d), url("images/h-bg1.jpeg");
     background-size: cover;
+    background-position: center center;
+    animation:fade 5s linear infinite;
+}
 
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    6%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
 }
 /* nav start */
 .nav-wrap{
@@ -225,13 +248,39 @@ section{
     text-align: center;
 }
 /* about start  */
-.about-wrap h1 {
+.top-h1 {
     font-weight: 600;
     padding:0rem 2rem;
     display:inline-block;
-    border-bottom: .3rem solid var(--hover);
     font-size: 4.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+    position:relative;
+
+}
+.top-h1::before{
+    content:'';
+    position:absolute;
+    width:0%;
+    background:var(--hover);
+    height:.3rem;
+    bottom:-1rem;
+    transform: translateX(-50%);
+    transition:2s all ease;
+    animation: border 3s ease infinite;
+}
+@keyframes border {
+    0%,10%,100%{
+        width:0%;
+    }
+    25%{
+        width:10%;
+    }
+    50%{
+        width: 100%;
+    }
+    75%{
+        width:90%;
+    }
 }
 .about-row{
     display: flex;
@@ -244,12 +293,20 @@ section{
     width: 45%;
     border:2px solid var(--hover);
     box-shadow: 0rem 0rem 1rem var(--parimary) ;
-    height: 27rem;
-
+    height: 30rem;
+    overflow: hidden;
+    transition:1s all ease;
+}
+.about-left:hover{
+    box-shadow: 0rem 0rem 1rem var(--bg-color)
 }
 .about-left img{
-    width:cover;
 
+    width:cover;
+    transition:1s all ease;
+}
+.about-left img:hover{
+   transform: scale(1.1);
 }
 .about-right{
     width: 53%;
@@ -339,8 +396,13 @@ section{
     margin-bottom:3rem;
     border-radius: .6rem;
     box-shadow: 0rem 0rem 1.8rem var(--hover);
+    position: relative;
+    transition:.8s all ease-out;
 }
-.t-wrap::before{
+.col-3:hover{
+    box-shadow: 0rem 0rem 2rem var(--parimary);
+}
+.col-3::before{
     content: "";
     position:absolute;
     width:100%;
@@ -348,16 +410,22 @@ section{
     top:0;
     left:0;
     background: var(--hover);
-    z-index: 10;
+    z-index: 0;
 }
 
 .t-wrap{
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding: 3rem;
+    padding: 4rem 0rem;
     text-align: center;
+    overflow: hidden;
+    transition:.5s all ease-out;
+    z-index: 20;
 }
+.t-wrap:hover{
+    transform: scale(1.1);
+    z-index: 200;
+ }
 .teacher{
     width:20rem;
     height:20rem;
@@ -365,8 +433,7 @@ section{
     border-radius: 50%;
     border:.5rem solid var(--hover);
     margin-bottom:2rem;
-    z-index: 200;
-
+    z-index: 30;
 }
 
 
